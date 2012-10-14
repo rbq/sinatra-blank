@@ -13,4 +13,4 @@ gem 'guard'
 gem 'guard-livereload'
 
 # Uncomment this if you use Rack middlewate instead of browser plugin
-# gem 'rack-livereload'
+gem 'rack-livereload'

@@ -2,7 +2,7 @@ class Application < Sinatra::Base
 
   # Uncomment this if you use Rack middlewate instead of 
   # browser plugin
-  # use Rack::LiveReload
+  use Rack::LiveReload
 
   set :views, Proc.new { File.join root, "app/views" }
 
