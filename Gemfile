@@ -1,16 +1,14 @@
 source :rubygems
 
-gem 'sinatra'
-gem 'sinatra-reloader', :require => 'sinatra/reloader'
-gem 'sass'
-gem 'haml'
-gem 'thin'
-gem 'foreman'
 gem 'coffee-script'
 gem 'execjs'
-
+gem 'foreman'
 gem 'guard'
 gem 'guard-livereload'
-
-# Uncomment this if you use Rack middlewate instead of browser plugin
+gem 'haml'
 gem 'rack-livereload'
+gem 'rb-fsevent', '~> 0.9.1'
+gem 'sass'
+gem 'sinatra'
+gem 'sinatra-reloader', :require => 'sinatra/reloader'
+gem 'thin'
