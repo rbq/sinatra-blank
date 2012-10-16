@@ -30,31 +30,61 @@
 
   #categories
 
-    .category.new
-      .title= "Новые модели"
-      .teasers
-        - 1.upto 3 do |i|
-          = i
-
     .category.popular
       .title= "Популярные модели"
       .teasers
+        - 1.upto 3 do |i|
+          .teaser
+            .img
+              %img(src="/images/boat-small.jpg")
+            .add-to-comparison(data-id="101")
+              .icon(title="Добавить в сравнение")= "+"
+            .title
+              %a(href="./model")= "Princess 62"
+            .price
+              %span.prefix= "от"
+              %span.int= "1 500 000 £"
+        .clear
+
+    .category.new
+      .title= "Новые модели"
+      .teasers
         - 1.upto 4 do |i|
-          = i
+          .teaser
+            .img
+              %img(src="/images/boat-small.jpg")
+            .add-to-comparison(data-id="101")
+              .icon(title="Добавить в сравнение")= "+"
+            .title
+              %a(href="./model")= "Princess 62"
+            .price
+              %span.prefix= "от"
+              %span.int= "1 500 000 £"
+        .clear
 
     .category.rest
       .title
         %span= "Все остальные модели"
         %span.second= "(256 шт.)"
       .sort-order-selector
-        .header= "Сортировать по"
+        %span.header= "Сортировать по"
         %ul
           %li.active= "длине"
           %li= "цене"
           %li= "алфавиту"
       .teasers
         - 1.upto 10 do |i|
-          = i
+          .teaser
+            .img
+              %img(src="/images/boat-small.jpg")
+            .add-to-comparison(data-id="101")
+              .icon(title="Добавить в сравнение")= "+"
+            .title
+              %a(href="./model")= "Princess 62"
+            .price
+              %span.prefix= "от"
+              %span.int= "42 000 £"
+        .clear
 
   #side-banners
     .sponsor
