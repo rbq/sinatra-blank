@@ -4,6 +4,10 @@ class Application < Sinatra::Base
   # browser plugin
   use Rack::LiveReload
 
+  configure do
+    mime_type :javascript, 'application/javascript'
+  end
+
   set :views, Proc.new { File.join root, "app/views" }
 
   get '/' do
@@ -17,6 +21,11 @@ class Application < Sinatra::Base
 
   # Hach for coffeescript
   get '/javascripts/:file.js' do |file|
-    coffee file.to_sym, :views => './app/assets/javascripts'
+    if File.exists? "./app/assets/javascripts/#{file}"
+      coffee file.to_sym, :views => './app/assets/javascripts'
+    else
+      content_type :javascript
+      File.read "./public/javascripts/#{file}"
+    end
   end
 end
