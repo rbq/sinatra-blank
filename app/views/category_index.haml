@@ -11,16 +11,59 @@
 
   #better-in-class
     .content
-      .title= "Лучшие в классе"
+      .super-title= "Лучшие в классе"
       - 1.upto 2 do |i|
         .teaser(class="#{i==1?'first':'second'}")
           .img
             %img(src="/images/yacht-big.jpg")
-          .title
-            %a= "Sunseeker ManhaRan 64"
-          .add-to-comparison(data-id="101")= "Добавить в сравнение"
-          .price
-            %span.prefix= "от"
-            %span.int= "1 500 000 £"
-          .description= "На Мальте стартовала 31-я регата Rolex Middle Sea Race. Это одна из классических парусных гонок \"большого шлема\", проводится с 1968 года. RMSR еще и самая протяженная."
+          .additional
+            .add-to-comparison(data-id="101")
+              .icon= "+"
+              %span= "добавить в сравнение"
+            .title
+              %a= "Sunseeker ManhaRan 64"
+            .price
+              %span.prefix= "от"
+              %span.int= "1 500 000 £"
+            .description= "На Мальте стартовала 31-я регата Rolex Middle Sea Race. Это одна из классических парусных гонок \"большого шлема\", проводится с 1968 года. RMSR еще и самая протяженная."
       .clear
+
+  #categories
+
+    .category.new
+      .title= "Новые модели"
+      .teasers
+        - 1.upto 3 do |i|
+          = i
+
+    .category.popular
+      .title= "Популярные модели"
+      .teasers
+        - 1.upto 4 do |i|
+          = i
+
+    .category.rest
+      .title
+        %span= "Все остальные модели"
+        %span.second= "(256 шт.)"
+      .sort-order-selector
+        .header= "Сортировать по"
+        %ul
+          %li.active= "длине"
+          %li= "цене"
+          %li= "алфавиту"
+      .teasers
+        - 1.upto 10 do |i|
+          = i
+
+  #side-banners
+    .sponsor
+      %p= "Catalog sponsor"
+    .banner-240x400
+      %p= "240 x 400"
+    .banner-240-90
+      %p= "240 x 90"
+    .yacht-select-master
+      %p= "Yacht select master"
+    .facebook
+      %p= "Facebook"

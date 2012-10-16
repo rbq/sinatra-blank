@@ -17,6 +17,7 @@ body {
     h1 {
       position: relative;
       z-index: 2;
+      display: inline-block;
     }
 
     .links {
@@ -66,19 +67,40 @@ body {
     width: 10000px;
     background: #171717 url(/images/better-in-class-bg.jpg) no-repeat center center;
     box-shadow: inset #000 0 0 100px;
+    margin-bottom: 50px;
 
     .content {
       margin-left: 4500px;
+      width: 990px;
 
-      .title {}
+      .super-title {
+        font: normal 16px 'InterstateCyr';
+        text-transform: uppercase;
+        color: #fff;
+        margin: 0 auto !important;
+        padding: 30px 0 0;
+        width: 600px;
+        text-align: center;
+        text-shadow: #fff 0 0 1px;
+
+        &:before,
+        &:after {
+          width: 90px;
+          height: 5px;
+          border-top: 1px solid #585858;
+          margin: -10px 15px 0;
+          display: inline-block;
+          content: "";
+        }
+      }
 
       .teaser {
         width: 465px;
         height: 406px;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         float: left;
-        margin: 30px 10px;
-        box-shadow: #000 0 0 50px;
+        margin: 30px 10px 40px;
+        box-shadow: #000 0 0 100px;
 
         &.first{
           margin-right: 30px;
@@ -87,18 +109,135 @@ body {
         .img {
           img {}
         }
-        .title {
-          a {}
-        }
-        .add-to-comparison {}
-        .price {
-          span {
-            &.prefix {}
-            &.int {}
+
+        .additional {
+          margin: 20px 35px 0;
+
+          .add-to-comparison {
+            color: #57addc;
+            position: absolute;
+            margin: 2px 0 0 260px;
+            font-size: 11px;
+            cursor: pointer;
+
+            .icon {
+              display: inline-block;
+              position: absolute;
+              font: bold 23px Arial, Helvetica, sans-serif;
+              margin: -6px 0 0 0;
+            }
+
+            span {
+              margin: 0 0 0 20px;
+            }
+
+            &:hover {
+              color: #fff;
+            }
+          }
+
+          .title {
+            margin: 0 0 4px 0;
+
+            a {
+              font: bold 13px Arial, Helvetica, sans-serif;
+              color: #fff;
+              text-decoration: none;
+
+              &:hover {
+                color: #57addc;
+              }
+            }
+          }
+
+          .price {
+            color: #c0bdbd;
+            margin: 0 0 10px;
+
+            span {
+              &.prefix { font-size: 10px }
+              &.int { font: italic 20px Georgia }
+            }
+          }
+
+          .description {
+            font: normal 13px/15px Arial, Helvetica, sans-serif;
+            color: #ccc;
           }
         }
-        .description {}
       }
     }
   } // #better-in-class
+
+  #categories {
+    width: 735px;
+    float: left;
+
+    .category {
+      .title {
+        width: 80px;
+        font: normal 16px/20px 'InterstateCyr';
+        color: #333;
+        padding-bottom: 20px;
+
+        &:after {
+          content: "";
+          width: 73px;
+          border-bottom: 1px solid #cfcfcf;
+          display: block;
+          margin-top: 10px;
+        }
+
+        span.second {
+          color: #999;
+        }
+      }
+    }
+
+    .popular {}
+    .new {}
+    .rest {}
+  } // #categories
+
+  #side-banners { // TODO: DRY(!!!);
+    width: 240px;
+    float: left;
+
+    div.sponsor, div.banner-240x400, div.banner-240-90, div.yacht-select-master, div.facebook {
+      display: table;
+      position: relative;
+      border: 1px solid #ccc;
+      width: 240px;
+      margin-bottom: 16px;
+
+      p {
+        font: normal 14px Helvetica, arial, tahoma, sans-serif;
+        color: #999;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+
+    div.sponsor {
+      height: 90px;
+      border: none;
+    }
+
+    div.banner-240x400 {
+      height: 400px;
+    }
+
+    div.banner-240-90 {
+      height: 90px;
+    }
+
+    div.yacht-select-master {
+      height: 90px;
+    }
+
+    div.facebook {
+      height: 73px;
+    }
+  }
 }
