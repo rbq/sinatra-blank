@@ -1,0 +1,26 @@
+#category-index
+  .header
+    %h1= "Флайбриджи до 15 метров"
+    .links
+      %a(href="./before")= "← до 15 метров"
+      %a(href="./after")= "от 20 до 30 метров →"
+
+    .category-sponsor
+      .banner
+      .title= "Спонсор раздела"
+
+  #better-in-class
+    .content
+      .title= "Лучшие в классе"
+      - 1.upto 2 do |i|
+        .teaser(class="#{i==1?'first':'second'}")
+          .img
+            %img(src="/images/yacht-big.jpg")
+          .title
+            %a= "Sunseeker ManhaRan 64"
+          .add-to-comparison(data-id="101")= "Добавить в сравнение"
+          .price
+            %span.prefix= "от"
+            %span.int= "1 500 000 £"
+          .description= "На Мальте стартовала 31-я регата Rolex Middle Sea Race. Это одна из классических парусных гонок \"большого шлема\", проводится с 1968 года. RMSR еще и самая протяженная."
+      .clear

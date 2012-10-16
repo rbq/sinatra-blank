@@ -1,3 +1,5 @@
+# coding: utf-8
+
 class Application < Sinatra::Base
 
   # Uncomment this if you use Rack middlewate instead of 
@@ -14,6 +16,10 @@ class Application < Sinatra::Base
     haml :index
   end
 
+  get '/category-index' do
+    haml :category_index, :layout => :index
+  end
+
   #  Hack for sass files
   get '/stylesheets/:file.css' do |file|
     scss file.to_sym, :views => './app/assets/stylesheets'
@@ -21,11 +27,11 @@ class Application < Sinatra::Base
 
   # Hach for coffeescript
   get '/javascripts/:file.js' do |file|
-    if File.exists? "./app/assets/javascripts/#{file}"
+    if File.exists? "./app/assets/javascripts/#{file}.coffee"
       coffee file.to_sym, :views => './app/assets/javascripts'
     else
       content_type :javascript
-      File.read "./public/javascripts/#{file}"
+      File.read "./public/javascripts/#{file}.js"
     end
   end
 end

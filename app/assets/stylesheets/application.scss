@@ -6,7 +6,99 @@ body {
 #itboat-fake-wrapper {
   width: 990px;
   margin: 0 auto;
+  padding-top: 30px;
   border-left: 1px solid #ccc;
   border-right: 1px solid #ccc;
   height: 1000px;
+}
+
+#category-index {
+  .header {
+    h1 {
+      position: relative;
+      z-index: 2;
+    }
+
+    .links {
+      position: absolute;
+      margin: -16px 0 0 295px;
+      width: 400px;
+      text-align: center;
+      z-index: 1;
+
+      a {
+        font-size: 11px;
+        text-decoration: none;
+
+        &:first-of-type {
+          margin-right: 15px;
+        }
+
+        &:hover {
+          color: #333;
+        }
+      }
+    }
+
+    .category-sponsor {
+      position: absolute;
+      left: 50%;
+      margin: -40px 0 0 245px;
+      z-index: 1;
+
+      .banner {
+        width: 250px;
+        height: 60px;
+        background: #ccc;
+      }
+
+      .title {
+        width: 100%;
+        text-align: center;
+        font-size: 11px;
+        margin-top: 2px;
+      }
+    }
+  } // .header
+
+  #better-in-class {
+    margin: 50px 0 0 -4500px;
+    width: 10000px;
+    background: #171717 url(/images/better-in-class-bg.jpg) no-repeat center center;
+    box-shadow: inset #000 0 0 100px;
+
+    .content {
+      margin-left: 4500px;
+
+      .title {}
+
+      .teaser {
+        width: 465px;
+        height: 406px;
+        background: rgba(0, 0, 0, 0.5);
+        float: left;
+        margin: 30px 10px;
+        box-shadow: #000 0 0 50px;
+
+        &.first{
+          margin-right: 30px;
+        }
+
+        .img {
+          img {}
+        }
+        .title {
+          a {}
+        }
+        .add-to-comparison {}
+        .price {
+          span {
+            &.prefix {}
+            &.int {}
+          }
+        }
+        .description {}
+      }
+    }
+  } // #better-in-class
 }

@@ -1,11 +1,12 @@
 !!! 5
 %html
   %head
-    %title= "New catalog category"
+    %title= "Itboat > Category Index"
     %link(rel="stylesheet" href="/stylesheets/pack.css" media="screen" type="text/css")
     %link(rel="stylesheet" href="/stylesheets/application.css" media="screen" type="text/css")
     %script(type="application/javascript" src="/javascripts/pack.js")
     %script(type="application/javascript" src="/javascripts/application.js")
   %body
     #itboat-fake-wrapper
-      #text= "ok"
+      = yield
+      
