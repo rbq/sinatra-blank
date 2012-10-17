@@ -281,20 +281,53 @@ body {
               box-shadow: #666 0 0 10px;
               color: #ccc;
               z-index: 30;
-              display: none;
+              // display: none;
 
               .arrow {
                 position: absolute;
                 color: rgba(0, 0, 0, 0.6);
                 text-shadow: #666 0 0 10px;
+                margin: 8px 0 0 40px;
               }
 
               &.before {
                 text-align: center;
                 margin: -49px 0 0 -43px;
+              }
 
-                .arrow {
-                  margin: 8px 0 0 40px;
+              &.after {
+                text-align: left;
+                margin: -49px 0 0 -43px;
+                padding-left: 10px;
+
+                a {
+                  font-weight: bold;
+                  text-decoration: none;
+                  display: block;
+                  padding: 4px 0 0 0;
+                }
+
+                .separator {
+                  width: 105px;
+                  background: rgba(255,255,255,0.4);
+                  height: 1px;
+                  box-shadow: #333 0 -1px 0;
+                  margin: 7px 0 7px -10px;
+                }
+
+                .delete {
+                  span {
+                    &.ico {
+                      color: #999;
+                      font-size: 16px;
+                      font-weight: bold;
+                    }
+
+                    &.action {
+                      font-weight: bold;
+                      cursor: pointer;
+                    }
+                  }
                 }
               }
             }

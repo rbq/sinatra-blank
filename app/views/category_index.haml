@@ -37,11 +37,20 @@
           .teaser
             .img
               %img(src="/images/boat-small.jpg")
+
             .add-to-comparison(data-id="101")
-              .tooltip.before
-                %span= "Добавить в сравнение"
+              / .tooltip.before
+              /   %span= "Добавить в сравнение"
+              .tooltip.after
+                %span= "В сравнении"
+                %a(href="./comparison")= "показать"
+                .separator
+                .delete
+                  %span.ico= "×"
+                  %span.action= "удалить"
                 .arrow= "▼"
               .icon= "+"
+
             .title
               %a(href="./model")= "Princess 62"
             .price
