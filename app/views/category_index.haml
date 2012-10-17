@@ -97,3 +97,14 @@
       %p= "Yacht select master"
     .facebook
       %p= "Facebook"
+
+  #shipyards-teasers
+    .header= "Верфи"
+    %ul
+      - 7.times do
+        %li
+          .img
+            %img(src="/images/shipyard-logo.jpg")
+          .title
+            %a(href="./shipyard")= "Feadship"
+          .country= "Нидерланды"

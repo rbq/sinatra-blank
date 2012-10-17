@@ -172,6 +172,9 @@ body {
     float: left;
 
     .category {
+      // border: 1px solid red;
+      padding-bottom: 20px;
+
       .title {
         width: 80px;
         font: normal 16px/20px 'InterstateCyr';
@@ -304,7 +307,7 @@ body {
       
       .sort-order-selector {
         width: 100%;
-        margin: 0 0 30px 0;
+        margin: 0 0 40px 0;
         text-align: right;
 
         span.header {
@@ -406,6 +409,30 @@ body {
 
     div.facebook {
       height: 73px;
+    }
+  }
+
+  #shipyards-teasers {
+    width: 100%;
+    clear: both;
+    float: none;
+
+    .header {}
+    ul {
+      li {
+        list-style: none;
+        float: left;
+
+        .img {
+          img {}
+        }
+        .title {
+          a {
+            &:hover {}
+          }
+        }
+        .country {}
+      }
     }
   }
 }
