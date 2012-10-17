@@ -38,7 +38,10 @@
             .img
               %img(src="/images/boat-small.jpg")
             .add-to-comparison(data-id="101")
-              .icon(title="Добавить в сравнение")= "+"
+              .tooltip.before
+                %span= "Добавить в сравнение"
+                .arrow= "▼"
+              .icon= "+"
             .title
               %a(href="./model")= "Princess 62"
             .price
@@ -104,7 +107,8 @@
       - 7.times do
         %li
           .img
-            %img(src="/images/shipyard-logo.jpg")
+            %a(href="./shipyard")
+              %img(src="/images/shipyard-logo.jpg")
           .title
             %a(href="./shipyard")= "Feadship"
           .country= "Нидерланды"

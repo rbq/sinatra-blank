@@ -47,7 +47,8 @@ body {
       .banner {
         width: 250px;
         height: 60px;
-        background: #ccc;
+        background: #fff;
+        border: 1px solid #ccc;
       }
 
       .title {
@@ -227,6 +228,9 @@ body {
       }
 
       &.rest {
+        .teasers {
+          border-bottom: none;
+        }
         .teaser {
           width: 115px;
           margin-right: 11px;
@@ -261,6 +265,40 @@ body {
           .add-to-comparison {
             position: absolute;
 
+            &:hover {
+              .tooltip {
+                display: block;
+              }
+            }
+
+            .tooltip {
+              width: 90px;
+              padding: 10px 5px;
+              background: rgba(0, 0, 0, 0.7);
+              position: absolute;
+              font-size: 11px;
+              border-radius: 5px;
+              box-shadow: #666 0 0 10px;
+              color: #ccc;
+              z-index: 30;
+              display: none;
+
+              .arrow {
+                position: absolute;
+                color: rgba(0, 0, 0, 0.6);
+                text-shadow: #666 0 0 10px;
+              }
+
+              &.before {
+                text-align: center;
+                margin: -49px 0 0 -43px;
+
+                .arrow {
+                  margin: 8px 0 0 40px;
+                }
+              }
+            }
+
             .icon {
               font: bold 25px Arial, Helvetica, sans-serif;
               color: #57addc;
@@ -269,10 +307,6 @@ body {
 
               &:hover {
                 color: #333;
-                border: 1px solid #57addc;
-                border-radius: 30px;
-                padding: 0 7px;
-                margin: -6px 0 0 -8px;
               }
             }
           }
@@ -416,22 +450,63 @@ body {
     width: 100%;
     clear: both;
     float: none;
+    border-top: 1px solid #c9c9c9;
+    padding: 20px 0 500px;
 
-    .header {}
+    .header {
+      font: normal 14px 'InterstateCyr';
+      text-transform: uppercase;
+      color: #303030;
+      width: 120px;
+      background: #fff;
+      text-align: center;
+      margin: -28px auto 30px;
+    }
+
     ul {
       li {
         list-style: none;
         float: left;
+        margin-right: 18px;
+
+        &:last-of-type {
+          margin-right: 0;
+        }
 
         .img {
-          img {}
-        }
-        .title {
-          a {
-            &:hover {}
+          width: 126px;
+          height: 91px;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: #999 0 0 8px;
+          text-align: center;
+          vertical-align: middle;
+          display: table-cell;
+
+          img {
+            position: relative;
           }
         }
-        .country {}
+
+        .title {
+          font: bold 13px Arial, Helvetica, sans-serif;
+          margin: 10px 0 3px 4px;
+          
+          a {
+            color: #121212;
+            text-decoration: none;
+
+            &:hover {
+              color: #57addc;
+            }
+          }
+        }
+
+        .country {
+          font: normal 11px Arial, Helvetica, sans-serif;
+          color: #b2aaaa;
+          margin-left: 4px;
+        }
       }
     }
   }
