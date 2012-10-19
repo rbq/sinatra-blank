@@ -3,6 +3,18 @@ body {
   margin: 0;
 }
 
+// TODO: move to common fonts file;
+@font-face {
+  font-family: 'WebSymbolsRegular';
+  src: url('/fonts/websymbols-regular-webfont.eot');
+  src: url('/fonts/websymbols-regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/websymbols-regular-webfont.woff') format('woff'),
+       url('/fonts/websymbols-regular-webfont.ttf') format('truetype'),
+       url('/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 #itboat-fake-wrapper {
   width: 990px;
   margin: 0 auto;
@@ -209,6 +221,10 @@ body {
           .add-to-comparison {
             margin-left: 175px;
           }
+
+          .img {
+            height: 110px;
+          }
         }
       }
 
@@ -223,6 +239,10 @@ body {
 
           .add-to-comparison {
             margin-left: 125px;
+          }
+
+          .img {
+            height: 81px;
           }
         }
       }
@@ -242,6 +262,10 @@ body {
           .add-to-comparison {
             margin-left: 95px;
           }
+          
+          .img {
+            height: 62px;
+          }
         }
       }
 
@@ -259,6 +283,49 @@ body {
 
             img {
               width: 100%;
+            }
+
+            &:hover {
+              .admin-actions {
+                display: block;
+              }
+            }
+
+            .admin-actions {
+              background: rgba(0, 0, 0, 0.4);
+              position: absolute;
+              display: none;
+
+              .wrapper {
+                position: relative;
+                top: 50%;
+                margin: -15px auto 0 !important;
+                width: 200px;
+                text-align: center;
+
+                span {
+                  color: #fff;
+                  font: normal 250% 'WebSymbolsRegular';
+                  margin-right: 15px;
+                  text-shadow: #000  0 0 10px;
+
+                  &:last-of-type {
+                    margin-right: 0;
+                  }
+                }
+              }
+              
+              span {
+                cursor: pointer;
+
+                &.move {
+                  cursor: move;
+                }
+
+                &:hover {
+                  color: #369;
+                }
+              }
             }
           }
 
@@ -281,7 +348,7 @@ body {
               box-shadow: #666 0 0 10px;
               color: #ccc;
               z-index: 30;
-              // display: none;
+              display: none;
 
               .arrow {
                 position: absolute;
@@ -297,7 +364,7 @@ body {
 
               &.after {
                 text-align: left;
-                margin: -49px 0 0 -43px;
+                margin: -80px 0 0 -48px;
                 padding-left: 10px;
 
                 a {
@@ -305,6 +372,10 @@ body {
                   text-decoration: none;
                   display: block;
                   padding: 4px 0 0 0;
+
+                  &:hover {
+                    color: #fff;
+                  }
                 }
 
                 .separator {
@@ -318,7 +389,7 @@ body {
                 .delete {
                   span {
                     &.ico {
-                      color: #999;
+                      color: #ccc;
                       font-size: 16px;
                       font-weight: bold;
                     }
@@ -326,6 +397,13 @@ body {
                     &.action {
                       font-weight: bold;
                       cursor: pointer;
+                      color: #5E93C5;
+                      margin: -13px 0 0 15px;
+                      display: block;
+
+                      &:hover {
+                        color: #fff;
+                      }
                     }
                   }
                 }
@@ -340,6 +418,10 @@ body {
 
               &:hover {
                 color: #333;
+              }
+
+              &.after {
+                color: #60680F;
               }
             }
           }
@@ -441,7 +523,11 @@ body {
     width: 240px;
     float: left;
 
-    div.sponsor, div.banner-240x400, div.banner-240-90, div.yacht-select-master, div.facebook {
+    div.sponsor, 
+    div.banner-240x400, 
+    div.banner-240-90, 
+    div.yacht-select-master, 
+    div.facebook {
       display: table;
       position: relative;
       border: 1px solid #ccc;

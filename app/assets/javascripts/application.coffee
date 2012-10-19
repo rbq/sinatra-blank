@@ -1,4 +1,5 @@
 jQ = jQuery.noConflict() if typeof jQ == 'undefined'
+
 jQ ->
   if jQ('#category-index').length
 
@@ -11,3 +12,10 @@ jQ ->
     # Prototype for adding boat in comparison
     jQ('div.add-to-comparison').click ->
       console.log "We added boat with id #{jQ(@).data('id')}"
+
+    jQ('.admin-actions').each ->
+      img = jQ(@).parent('.img')
+      console.log img.width(), img.height()
+      jQ(@).css
+        'width': img.width()
+        'height': img.height()

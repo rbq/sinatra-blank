@@ -36,20 +36,34 @@
         - 1.upto 3 do |i|
           .teaser
             .img
+              .admin-actions
+                .wrapper
+                  %span.move(title="Переместить в другую категорию")= "~"
+                  %span.edit(title="Редактировать")= "S"
+                  / %span.publish(title="Переместить в опубликованные")= "w" 
+                  %span.unpublish(title="Переместить в неопубликованные")= "x" 
               %img(src="/images/boat-small.jpg")
 
             .add-to-comparison(data-id="101")
-              / .tooltip.before
-              /   %span= "Добавить в сравнение"
-              .tooltip.after
-                %span= "В сравнении"
-                %a(href="./comparison")= "показать"
-                .separator
-                .delete
-                  %span.ico= "×"
-                  %span.action= "удалить"
-                .arrow= "▼"
-              .icon= "+"
+
+              - i = rand(2); if i.even?
+
+                .tooltip.before
+                  %span= "Добавить в сравнение"
+                  .arrow= "▼"
+
+              - else
+
+                .tooltip.after
+                  %span= "В сравнении"
+                  %a(href="./comparison")= "показать"
+                  .separator
+                  .delete
+                    %span.ico= "×"
+                    %span.action= "удалить"
+                  .arrow= "▼"
+
+              .icon(class="#{(i.even? ? "before" : "after")}")= (i.even? ? "+" : "✓")
 
             .title
               %a(href="./model")= "Princess 62"
